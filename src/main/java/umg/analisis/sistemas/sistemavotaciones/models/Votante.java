@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Setter
 @Entity
 @Table(name = "votante", schema = "sistema_votaciones")
-public class Prueba {
+public class Votante {
 
     @Id
     @Column(name = "dpi", length = 13)
@@ -36,4 +36,16 @@ public class Prueba {
 
     @Column(name = "discapacidad", length = 100)
     private String discapacidad;
+
+    @Column(name = "estado_votante")
+    private Boolean estadoVotante;
+
+    @Column(name = "nombre", length = 50)
+    private String nombre;
+
+    @Column(name = "apellido", length = 50)
+    private String apellido;
+
+    @Column(name = "sexo", length = 1)
+    private String sexo;
 }

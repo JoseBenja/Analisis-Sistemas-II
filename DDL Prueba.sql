@@ -8,5 +8,9 @@ CREATE TABLE sistema_votaciones.votante (
                                             etnia varchar(30) NOT NULL,
                                             analfabeta bool NOT NULL,
                                             discapacidad varchar(100) NULL,
+                                            estado_votante bool NULL,
+                                            nombre varchar(50) NULL,
+                                            apellido varchar(50) NULL,
+                                            sexo varchar(1) NULL,
                                             CONSTRAINT votante_pkey PRIMARY KEY (dpi)
 );
