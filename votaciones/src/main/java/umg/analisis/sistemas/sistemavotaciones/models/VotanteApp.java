@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Setter
 @Entity
 @Table(name = "votante", schema = "sistema_votaciones")
-public class Votante {
+public class VotanteApp {
 
     @Id
     @Column(name = "dpi", length = 13)
