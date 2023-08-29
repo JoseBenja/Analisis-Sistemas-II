@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import umg.analisis.sistemas.sistemavotaciones.clients.ApiRenap;
 import umg.analisis.sistemas.sistemavotaciones.clients.ApiTse;
+import umg.analisis.sistemas.sistemavotaciones.dtos.ApiTseDto;
 
 @RestController
 @RequestMapping("/api-tse")
@@ -19,7 +20,7 @@ public class ApiTseController {
     }
 
     @GetMapping("/consume")
-    public Object consumeApiTse(String cui) {
+    public ApiTseDto consumeApiTse(String cui) {
         String apiUrl = "http://localhost:8082/votante/empadronado/";
         return apiTse.consumeApiTse(apiUrl + cui);
     }

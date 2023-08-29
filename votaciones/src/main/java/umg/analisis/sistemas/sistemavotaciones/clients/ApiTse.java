@@ -2,6 +2,7 @@ package umg.analisis.sistemas.sistemavotaciones.clients;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import umg.analisis.sistemas.sistemavotaciones.dtos.ApiTseDto;
 
 @Service
 public class ApiTse {
@@ -12,7 +13,7 @@ public class ApiTse {
         this.restTemplate = new RestTemplate();
     }
 
-    public Object consumeApiTse(String apiUrl) {
-        return restTemplate.getForObject(apiUrl, Object.class);
+    public ApiTseDto consumeApiTse(String apiUrl) {
+        return restTemplate.getForObject(apiUrl, ApiTseDto.class);
     }
 }
